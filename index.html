@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="w-75 mx-auto py-5">
+            <h1 class="mb-5">Product Management System</h1>
+            <div class="form-group mb-3">
+                <label for="productName" class="mb-2 fw-bold">productName</label>
+                <input oninput="validateProductName()" type="text" class="form-control" id="productName"
+                    placeholder="Enter name">
+                <p class="text-danger d-none" id="wrongName">Invaild name (start with capital character and maximum 8
+                    character)</p>
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="productPrice" class="mb-2 fw-bold">productPrice</label>
+                <input oninput="validateProductPrice()" type="number" class="form-control" id="productPrice"
+                    placeholder="Enter price">
+                <p class="text-danger d-none" id="wrongPrice">Invaild price (Choose number between 1000:10000)</p>
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="productModel" class="mb-2 fw-bold">productModel</label>
+                <input oninput="validateProductModel()" type="text" class="form-control" id="productModel"
+                    placeholder="Enter model">
+                <p class="text-danger d-none" id="wrongModel">Invaild model (Choose between tv, mobile or laptop)</p>
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="productDesc" class="mb-2 fw-bold">productDesc</label>
+                <textarea oninput="validateProductDesc()" name="productDesc" class="form-control" id="productDesc"
+                    rows="5"></textarea>
+                <p class="text-danger d-none" id="wrongDescription">Invaild desc (minimum 250 character)</p>
+            </div>
+
+            <button class="btn btn-primary" id="addProduct" onclick="addProduct()">Add product</button>
+
+            <button class="btn btn-warning d-none" id="updateProduct" onclick="updateNewProduct()">Update
+                product</button>
+
+        </div>
+
+        <div class="w-75 mx-auto py-5">
+            <h4>Search ..</h4>
+            <input oninput="searchByName(this.value)" type="search" class="form-control">
+        </div>
+
+        <table class="table-dark text-center w-75 mx-auto">
+            <thead>
+                <th>Index</th>
+                <th>productName</th>
+                <th>productPrice</th>
+                <th>productModel</th>
+                <th>productDesc</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </thead>
+
+            <tbody id="tBoody"></tbody>
+        </table>
+
+    </div>
+
+
+    <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
