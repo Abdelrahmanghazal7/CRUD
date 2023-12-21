@@ -32,7 +32,7 @@ function addProduct() {
 
     flagProduct();
 
-    localStorage.setItem(productListName, JSON.stringify(productList))
+    localStorage.setItem(productListName, JSON.stringify(productList));
   }
 }
 
@@ -120,12 +120,12 @@ function validateProductName() {
   var regexProductName = /^[A-Z][a-z]{3,8}$/;
 
   if (regexProductName.test(productName.value) == true) {
-    document.getElementById("wrongName").classList.add("d-none")
-    productName.style.border = "none"
+    document.getElementById("wrongName").classList.add("d-none");
+    productName.style.border = "none";
     return true;
   } else {
-    document.getElementById("wrongName").classList.remove("d-none")
-    productName.style.border = "5px solid red"
+    document.getElementById("wrongName").classList.remove("d-none");
+    productName.style.border = "5px solid red";
     return false;
   }
 }
@@ -135,12 +135,12 @@ function validateProductPrice() {
   var regexProductPrice = /^[1-9][0-9]{3}|1[0]{4}$/;
 
   if (regexProductPrice.test(productPrice.value) == true) {
-    document.getElementById("wrongPrice").classList.add("d-none")
-    productPrice.style.border = "none"
+    document.getElementById("wrongPrice").classList.add("d-none");
+    productPrice.style.border = "none";
     return true;
   } else {
-    document.getElementById("wrongPrice").classList.remove("d-none")
-    productPrice.style.border = "5px solid red"
+    document.getElementById("wrongPrice").classList.remove("d-none");
+    productPrice.style.border = "5px solid red";
     return false;
   }
 }
@@ -150,12 +150,12 @@ function validateProductModel() {
   var regexProductModel = /tv|mobile|laptop/;
 
   if (regexProductModel.test(productModel.value) == true) {
-    document.getElementById("wrongModel").classList.add("d-none")
-    productModel.style.border = "none"
+    document.getElementById("wrongModel").classList.add("d-none");
+    productModel.style.border = "none";
     return true;
   } else {
-    document.getElementById("wrongModel").classList.remove("d-none")
-    productModel.style.border = "5px solid red"
+    document.getElementById("wrongModel").classList.remove("d-none");
+    productModel.style.border = "5px solid red";
     return false;
   }
 }
@@ -165,12 +165,12 @@ function validateProductDesc() {
   var regexProductDesc = /.{250,}/;
 
   if (regexProductDesc.test(productDesc.value) == true) {
-    document.getElementById("wrongDescription").classList.add("d-none")
-    productDesc.style.border = "none"
+    document.getElementById("wrongDescription").classList.add("d-none");
+    productDesc.style.border = "none";
     return true;
   } else {
-    document.getElementById("wrongDescription").classList.remove("d-none")
-    productDesc.style.border = "5px solid red"
+    document.getElementById("wrongDescription").classList.remove("d-none");
+    productDesc.style.border = "5px solid red";
     return false;
   }
 
